@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 
   user: "root",
 
-  password: "OliverHank6",
+  password: "",
   database: "bamazon"
 });
 
@@ -28,7 +28,7 @@ var displayProducts = function() {
     if (err) throw err;
     var displayTable = new table({
       head: ["Item ID", "Product Name", "Department", "Price", "Quantity"],
-      colWidths: [, 50, 50, 10, 10]
+      colWidths: [10, 50, 50, 10, 10]
     });
     for (var i = 0; i < res.length; i++) {
       displayTable.push([
@@ -48,21 +48,60 @@ function purchasePrompt() {
   inquirer
     .prompt([
       {
-        name: "item_id",
+        name: "ID",
         type: "input",
         message: "Please enter ID of the product you would like to buy? ",
         filter: Number
       },
       {
-        name: "stock_quantity",
+        name: "Quantity",
         type: "input",
         message: "How many units do you wish to purchase?",
         filter: Number
       }
     ])
     .then(function(answers) {
-      var unitsNeeded = answers.stock_quantity;
-      var itemID = answers.item_id;
+      var unitsNeeded = answers.Quantity;
+      var itemID = answers.ID;
       purchaseOrder(itemID, unitsNeeded);
     });
+}
+
+function purchaseOrder(ID, numNeeded) {
+  connection.query("SELECT * FROM products WHERE item_id =?", ID, function(
+    err,
+    res
+  ) {
+    if (err) {
+      console.log(err);
+    }
+    if (numNeeded <= res[0].stock_quantity) {
+      var totalCost = res[0].price * numNeeded;
+      console.log("Great News - Your order is in stock!");
+      console.log(
+        "The total cost for " +
+          numNeeded +
+          " " +
+          res[0].product_name +
+          "(s) is " +
+          "$" +
+          totalCost +
+          " -  Thank you!"
+      );
+
+      connection.query(
+        "UPDATE products SET stock_quantity = stock_quantity - " +
+          numNeeded +
+          " WHERE item_id = " +
+          ID
+      );
+    } else {
+      console.log(
+        "Insufficient Quantity available of " +
+          res[0].product_name +
+          " to complete your order."
+      );
+    }
+    displayProducts();
+  });
 }
