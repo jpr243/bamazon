@@ -31,7 +31,7 @@ The stock quantity is then adjusted.
 
 <img src="Images/CustomerInsufficientQuantity.gif"  alt="Screenshot"/> 
 
-### Manager View
+## Manager View
 
 Running this application will:
 List a set of menu options:
