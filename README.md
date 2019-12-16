@@ -14,7 +14,8 @@ The products table the following columns:
 5. stock_quantity (how much of the product is available in stores)
 
 The database is populated with 10 different products.
-<img src="images/bamazonCustomer1.gif" height="400" alt="Screenshot"/> 
+
+<img src="Images/BamazonCustomer1.gif" height="400" alt="Screenshot"/> 
 
 The user is prompted with two messages.
 1.  Asking them the ID of the product they would like to buy.
@@ -22,12 +23,12 @@ The user is prompted with two messages.
 
 ## Successful purchase
 
-<img src="images/bamazonCustomerPurchaseSuccess.gif" height="400" alt="Screenshot"/> 
+<img src="Images/CustomerPurchaseSuccess.gif" alt="Screenshot"/> 
 
 
 ## Insufficient quantity
 
-<img src="images/bamazonCustomerInsufficientQuantity.gif" height="400" alt="Screenshot"/> 
+<img src="Images/CustomerInsufficientQuantity.gif"  alt="Screenshot"/> 
 
 
 
