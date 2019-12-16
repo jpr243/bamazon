@@ -44,12 +44,11 @@ List a set of menu options:
 <img src="Images/ManagerLowInventory.gif"  alt="Screenshot"/> 
 
 3. Add to Inventory - the app will display a prompt that will let the manager "add more" of any item currently in the store.
-
-<img src="Images/ManagerProductAdd.gif"  alt="Screenshot"/> 
-
 4. Add New Product - the app will allow the manager to add a completely new product to the store.
 
 <img src="Images/ManagerAddInventoryProduct.gif"  alt="Screenshot"/> 
+
+<img src="Images/ManagerProductAdd.gif"  alt="Screenshot"/> 
 
 5. End Session - the app will allow the manager to end the session.
 
