@@ -125,7 +125,7 @@ var managerPrompt = function() {
         {
           name: "department",
           type: "input",
-          message: "Enter the product department:"
+          message: "Enter the product department: "
         },
         {
           name: "price",
@@ -143,7 +143,7 @@ var managerPrompt = function() {
         {
           name: "quantity",
           type: "input",
-          message: "Enter the number of items in stock",
+          message: "Enter the number of items in stock: ",
           validate: value => {
             if (!isNaN(value) && value > 0) {
               return true;
@@ -178,12 +178,12 @@ var managerPrompt = function() {
         name: "itemID",
         type: "input",
         message: "Enter the ID of the item you'd like to update: ",
-        //validate input is number from 1-11
+        //validate input is number between 1 and 10
         validate: value => {
-          if (!isNaN(value) && value <= 11) {
+          if (!isNaN(value) && value <= 10) {
             return true;
           } else {
-            console.log("Please enter a number between 1 and 11");
+            console.log("Please enter a number between 1 and 10");
             return false;
           }
         }
@@ -253,14 +253,7 @@ var managerPrompt = function() {
             }
           ],
           (err, res) => {
-            console.log(
-              "\n\tInventory Updated! " +
-                product_name +
-                "now has" +
-                (parseInt(productToUpdate.stock_quantity) +
-                  parseInt(productToUpdate.howMany)) +
-                " items in stock"
-            );
+            console.log("\n\tInventory has been successfully updated!");
             managerPrompt();
           }
         );

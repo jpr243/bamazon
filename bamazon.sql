@@ -19,7 +19,6 @@ CREATE TABLE products
     (item_id)
 );
 
-
     INSERT INTO products
         (product_name, department_name, price, stock_quantity)
     VALUES
@@ -31,8 +30,7 @@ CREATE TABLE products
         ('Canon camera', 'photography', 3569.15, 25),
         ('8 inch cake tin', 'cake_decorating_suppplies', 23.45, 12),
         ('Feather pillow twin pack', 'bedding_and_linen', 39.95, 2),
-        ('Wok', 'kitchen_and_dining', 76.63, 18),
-        ('Desk lamp', 'lighting', 46.98, 4);
+        ('Wok', 'kitchen_and_dining', 76.63, 18)
 
     SELECT *
     FROM products;
