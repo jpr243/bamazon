@@ -4,7 +4,7 @@ This is an Amazon-like storefront using MySQL, Inquirer and CLI App npm packages
 The app will take orders from customers and deplete stock from the inventory.
 
 There are two views 
-### Customer View
+## Customer View
 The products table the following columns:
 
 1. item_id (unique id for each product)
@@ -20,12 +20,12 @@ The user is prompted with two messages.
 1.  Asking them the ID of the product they would like to buy.
 2.  How many units of the product they would like to buy.
 
-####Successful purchase
+## Successful purchase
 
 <img src="images/bamazonCustomerPurchaseSuccess.gif" height="400" alt="Screenshot"/> 
 
 
-###Insufficient quantity
+## Insufficient quantity
 
 <img src="images/bamazonCustomerInsufficientQuantity.gif" height="400" alt="Screenshot"/> 
 
