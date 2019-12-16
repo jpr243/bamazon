@@ -41,7 +41,7 @@ List a set of menu options:
 
 2. View Low Inventory - the app will list all items with an inventory count lower than five
 
-<img src="Images/LowInventory.gif"  alt="Screenshot"/> 
+<img src="Images/ManagerLowInventory.gif"  alt="Screenshot"/> 
 
 3. Add to Inventory - the app will display a prompt that will let the manager "add more" of any item currently in the store.
 
