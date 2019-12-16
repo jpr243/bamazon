@@ -25,18 +25,35 @@ The user is prompted with two messages.
 
 <img src="Images/CustomerPurchaseSuccess.gif" alt="Screenshot"/> 
 
+The stock quantity is then adjusted.
 
 ## Insufficient quantity
 
 <img src="Images/CustomerInsufficientQuantity.gif"  alt="Screenshot"/> 
 
-
-
-
-
-
-
-
-
-
 ### Manager View
+
+Running this application will:
+List a set of menu options:
+1. View Products for Sale - the app will list every available item
+
+<img src="Images/ManagerViewProducts.gif"  alt="Screenshot"/> 
+
+2. View Low Inventory - the app will list all items with an inventory count lower than five
+
+<img src="Images/LowInventory.gif"  alt="Screenshot"/> 
+
+3. Add to Inventory - the app will display a prompt that will let the manager "add more" of any item currently in the store.
+
+<img src="Images/ManagerProductAdd.gif"  alt="Screenshot"/> 
+
+4. Add New Product - the app will allow the manager to add a completely new product to the store.
+
+<img src="Images/ManagerAddInventoryProduct.gif"  alt="Screenshot"/> 
+
+5. End Session - the app will allow the manager to end the session.
+
+<img src="Images/ManagerEndSession.gif"  alt="Screenshot"/> 
+
+
+
