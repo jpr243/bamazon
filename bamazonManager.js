@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 
   user: "root",
 
-  password: "",
+  password: "OliverHank6",
   database: "bamazon"
 });
 
@@ -253,7 +253,12 @@ var managerPrompt = function() {
             }
           ],
           (err, res) => {
-            console.log("\n\tInventory has been successfully updated!");
+            console.log(
+              `\n\tInventory has been successfully updated! There are now ${parseInt(
+                productToUpdate.stock_quantity
+              ) + parseInt(answer.howMany)} in stock.
+              `
+            );
             managerPrompt();
           }
         );
